@@ -1,0 +1,65 @@
+CLASSES A SEREM TESTADAS:
+
+____________________________________________________________________
+CLASSES JÁ ARRUMADAS COM ATRIBUTOS DE OUTRAS CLASSES (Ex: Cliente possui o atributo pessoa do tipo Pessoa) E JÁ TESTADAS E FUNCIONANDO:
+- TipoTelefone
+- Telefone
+- BloqueioDesbloqueio
+- Pessoa
+- Tarefa
+- Cliente
+- Advogado
+- Forum
+- TipoCausa
+- Titulo
+- BloqueioDesbloqueio
+- TituloPago
+- Processo
+- AdvogadoHonorario
+- HistBlodDesbloq
+
+
+
+____________________________________________________________________
+* NÃO SERÁ NECESSÁIO UTILIZAR A CLASSE.
+- HoraAdvogado
+- AgendaAudiencia
+
+
+
+- Logger
+- JavaDocs
+- Mensagens de Erro/Sucesso
+- Bateria de Testes + Lista de Bugs
+- PPT Apresenta�‹o + Script a ser seguido + 4 vias Impressas
+- Revisar documenta�ao do AM - CritŽrios
+- Revisar Documenta�‹o do AM
+- Valida�›es JavaScript
+- Compreens‹o de Todo o C—digo por Todos os integrantes
+- Conteœdo para P‡gina Index (pode ser as mensagens de Erro/Sucesso!)
+- Menu Completo
+- Melhorias em HTML (principalmente listas)
+- Bot‹o SAIR deve ir para P‡gina de Login (E a p‡gina de continuar funcionando!!!)
+- Corrigir Bugs (principalmente bugs da URL MALDITA)
+
+
+
+
+
+
+
+
+
+
+		var errosServerJS = [];
+		<% 
+		List<String> errosServer = null;
+		Object objErrosServer = request.getAttribute("");
+		if (objErrosServer != null)
+			errosServer = (List<String>)objErrosServer;
+		%>
+		<% for (String erro : errosServer) { %>
+			errosServerJS.push(<%= erro %>);
+		<% } %>
+		if (errosServerJS.length >0)
+			mostrarMensagem(errosServerJS, "Ocorreu um erro no Servidor", "erro");
